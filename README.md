@@ -1,2 +1,23 @@
 # TaxFormClassification
-Preprocessing scans or photos of income forms and classifying them using text extraction and CNN
+
+Тестовое задание УБРиР.
+Основная работа: создание модели способной классифицировать формы документов о доходах ФЛ. (2-НДФЛ, 3-НДФЛ, банковская форма или обнаружить некорректную форму)
+
+## Описание файлов
+<details>
+  <summary>Раскрыть</summary><br/>
+  
+  1. 1_SQL_queries.txt - Текстовый документ с SQL запросами к первому заданию
+  2. 2_ClassicML_DefaultDet.ipynb - Блокнот с основными шагами по выполнению задания 2.
+  3. 3_TaxFormClf.py - Скрипт способный выполнять классификацию документов. Описание внизу
+  4. test_images - 5 тестовых изображений.
+  5. requirements.txt - используемые библиотеки
+</details>
+
+## Описание классификатора документов о доходе ФЛ
+<details>
+  <summary>Раскрыть</summary><br/>
+  
+ 
+ 
+</details>
