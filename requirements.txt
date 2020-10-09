@@ -1,0 +1,11 @@
+cv2
+tensorflow==2.3.0
+pdf2image
+fuzzywuzzy
+tesserocr
+
+numpy
+scipy
+PIL
+
+
