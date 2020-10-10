@@ -17,12 +17,13 @@
   
 </details>
 
-## Описание классификатора документов о доходе ФЛ
+## Описание классификатора и инструкция по использованию
 <details>
   <summary>Раскрыть</summary><br/>
   
+  ## Описание
   
-  Использование. 
+  ## Использование
   Так как tesseract выполняет OCR достаточно медленно, обработка одного изображения может занимать до 20 секунд
   
   ```python
@@ -59,7 +60,7 @@
   # Загружаем изображения
   proc_imgs, texts, img_names = clf._load_process_images('folder_with_images')
   # Классифицируем
-  predictions = self._form_predictions(proc_imgs, texts, img_names)
+  predictions = clf._form_predictions(proc_imgs, texts, img_names)
   ```
 </details>
 
