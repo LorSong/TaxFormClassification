@@ -28,7 +28,15 @@
 ## Инструкция по использованию
  <details>
    <summary>Раскрыть</summary><br/>
-      
+   Подготовка. Убедитесь, что у вас установлены необходимые python библиотеки указанные в requirements.txt.
+   В особенности:
+      **tensorflow** > 2.0.0 (лучше 2.3.0)
+      **tesserocr** (вместе с tesseract, который должен установится по умолчанию вместе с tesserocr)
+      **pdf2image**
+      **fuzzywuzzy** (используется для сравнения текста)
+   
+   
+   
    Так как tesseract выполняет OCR достаточно медленно, обработка одного изображения может занимать до 20 секунд
 
    ```python
@@ -86,7 +94,7 @@
    clf = TaxFormClassificator.TaxFormClf()
 
    # Загружаем изображения
-   images, img_names = clf.__read_images_from_folder('folder_with_images')
+   images, img_names = clf._read_images_from_folder('folder_with_images')
    # Обработка (возможен некорректный поворот)
    proc_imgs = self._preprocess_images(images, img_names)
    # Извлечение текста и исправление поворота
