@@ -49,7 +49,28 @@
    ```python
    clf.class_names 
    >>> ['2НДФЛ', '3НДФЛ', 'Форма банка', 'Неизвестный документ']
+   
+   # Предсказанный класс, соответствующий индексу в class_names
    clf.pred_labels
+   >>> array([1, 0, 1], dtype=int64)
+   
+   # 2d array с предсказанными вероятностями. 
+   # Трансформируется в pred_labels путем np.argmax(probas, axis=1)
+   clf.pred_probas
+   # Аналогично, отдельно для CNN и OCR
+   clf.cnn_probas
+   clf.ocr_probas 
+   
+   # Лист с проведенными поворотами изображений (0, 90, 180, 270)
+   clf.rotations
+   >>> [270, 0, 0]
+   
+   # List с np.array изображениями
+   clf.proc_images
+   # List с полученными текстами, string
+   clf.texts
+   # Список имен файлов
+   clf.image_names
    >>>
 
    ```
