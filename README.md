@@ -17,21 +17,17 @@
   
 </details>
 
-## Описание классификатора и инструкция по использованию
+## Описание классификатора
 <details>
   <summary>Раскрыть</summary><br/>
   
-  ## Описание
-  <details>
-    <summary>Раскрыть</summary><br/>
-  
-    Модель
-  </details>
+  Модель
+</details>
     
     
-  ## Использование
-   <details>
-     <summary>Раскрыть</summary><br/>
+## Использование
+ <details>
+   <summary>Раскрыть</summary><br/>
       
    Так как tesseract выполняет OCR достаточно медленно, обработка одного изображения может занимать до 20 секунд
 
@@ -76,10 +72,10 @@
    # Классифицируем
    predictions = clf._form_predictions(proc_imgs, texts, img_names)
    ```
-    
-   </details>
-    
+
 </details>
+    
+
 
 
 
