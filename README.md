@@ -65,7 +65,7 @@
    clf.rotations
    >>> [270, 0, 0]
    
-   # List с np.array изображениями
+   # List с обработанными np.array изображениями
    clf.proc_images
    # List с полученными текстами, string
    clf.texts
