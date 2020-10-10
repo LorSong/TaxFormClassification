@@ -23,15 +23,50 @@
   
   
   Использование. 
-  Из за особенностей загрузки моделей, необходимо импортировать модуль tensorflow as tf
+  Так как tesseract выполняет OCR достаточно медленно, обработка одного изображения может занимать до 20 секунд
   
   ```python
+  # Из за особенностей загрузки моделей, необходимо импортировать модуль tensorflow as tf
   import tensorflow as tf
   import TaxFormClassificator
   # Иницируйте классификатор. На этой стадии он загрузит tf модель
   clf = TaxFormClassificator.TaxFormClf()
   # Вызовите метод predict указав папку с изображениями
-  clf.predict('folder_with_images')
+  predictions = clf.predict('folder_with_images')
+
+  predictions
+  >>> {filename_1.jpg: 'НДФЛ2', filename_2.jpg: 'НДФЛ3'}
   ```
- 
+  
+  После выполнения метода predict, также сохраняются дополнительные атрибуты
+  
+  ```python
+  clf.class_names 
+  >>> ['2НДФЛ', '3НДФЛ', 'Форма банка', 'Неизвестный документ']
+  clf.pred_labels
+  >>>
+
+  ```
+   Допускается использование классификатора на уже загруженных и обработанных изображениях, 
+   полученных методом _load_process_images.
+   Результат кода будет идентичен вызову метода predict.
+   
+  ```python
+  import tensorflow as tf
+  import TaxFormClassificator
+  clf = TaxFormClassificator.TaxFormClf()
+
+  # Загружаем изображения
+  proc_imgs, texts, img_names = clf._load_process_images('folder_with_images')
+  # Классифицируем
+  predictions = self._form_predictions(proc_imgs, texts, img_names)
+  ```
 </details>
+
+
+
+
+
+
+
+
