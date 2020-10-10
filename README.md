@@ -21,6 +21,17 @@
 <details>
   <summary>Раскрыть</summary><br/>
   
- 
+  
+  Использование. 
+  Из за особенностей загрузки моделей, необходимо импортировать модуль tensorflow as tf
+  
+  ```python
+  import tensorflow as tf
+  import TaxFormClassificator
+  # Иницируйте классификатор. На этой стадии он загрузит tf модель
+  clf = TaxFormClassificator.TaxFormClf()
+  # Вызовите метод predict указав папку с изображениями
+  clf.predict('folder_with_images')
+  ```
  
 </details>
