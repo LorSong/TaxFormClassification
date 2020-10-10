@@ -67,7 +67,12 @@
    clf = TaxFormClassificator.TaxFormClf()
 
    # Загружаем изображения
-   proc_imgs, texts, img_names = clf._load_process_images('folder_with_images')
+   images, img_names = clf.__read_images_from_folder('folder_with_images')
+   # Обработка (возможен некорректный поворот)
+   proc_imgs = self._preprocess_images(images, img_names)
+   # Извлечение текста и исправление поворота
+   proc_imgs, texts = self._extract_text_fix_orient(proc_imgs, img_names)
+        
    # Классифицируем
    predictions = clf._form_predictions(proc_imgs, texts, img_names)
    ```
