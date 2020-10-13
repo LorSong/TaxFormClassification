@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 13 10:16:00 2020
-
-@author: LorPC
-"""
-
 import tensorflow as tf
 from tensorflow.keras import layers
 
