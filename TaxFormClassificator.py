@@ -19,7 +19,7 @@ class TaxFormClf():
     Class for predicting tax form documents. Classes are:
     ['2НДФЛ', '3НДФЛ', 'Форма банка', 'Неизвестный документ'].
     ---------------------
-    Main method - 'load_predict'. Takes path to a folder with images you want to
+    Main method - 'predict'. Takes path to a folder with images you want to
     predict. For additional details see docstring for this method.
     ---------------------
     parameters: model_path - path to trained tensorflow model
